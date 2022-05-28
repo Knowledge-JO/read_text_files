@@ -25,7 +25,8 @@ def count_words():
     for s in story:
         dictionary[s] = (story.count(s))
     print(f'Total Words: {len(story)}\nTotal Letters:{len(split_content)}')
-    
     return (dictionary)
+
+    
 init = count_words()
 print(init)
