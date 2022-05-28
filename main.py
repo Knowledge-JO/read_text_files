@@ -16,13 +16,8 @@ def count_words():
     text = text.read()
     content = text.split(' ')
     for i in content:
-        #print(i)
-        #i = re.sub(r'\n', '', i)
-        i = i.strip(',')
-        i2 = i.strip('?')
-        i3 = i2.strip('.')
-        i4 = i3.strip('\n')
-        story.append(i4)
+        i = re.sub('[^A-Za-z0-9]', '', i)
+        story.append(i)
 
     split_content = ''.join(story)
 
